@@ -95,51 +95,51 @@ namespace MvcDemo.Controllers
         //}
 
 
-        //[HttpPost]
-        //public ActionResult Create(BL.Employee employee)
-        //{
-
-        //    if (ModelState.IsValid)
-        //    {
-        //        BL.EmployeeBL employeeBL = new BL.EmployeeBL();
-
-        //        employeeBL.AddEmmployee(employee);
-        //        return RedirectToAction("EmployeeBlList");
-        //    }
-        //    return View();
-        //}
-
-
         [HttpPost]
-        [ActionName("Create")]
-        public ActionResult Create_Post()
+        public ActionResult Create(BL.Employee employee)
         {
 
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
+                BL.EmployeeBL employeeBL = new BL.EmployeeBL();
 
-                    BL.Employee employee = new BL.Employee();
-                    if (TryUpdateModel<BL.Employee>(employee))
-                    {
-                        BL.EmployeeBL employeeBL = new BL.EmployeeBL();
-                        employeeBL.AddEmmployee(employee);
-                        return RedirectToAction("EmployeeBlList");
-                    }
-                    else
-                    {
-                        return View();
-                    }
-                }
-                return View();
+                employeeBL.AddEmmployee(employee);
+                return RedirectToAction("EmployeeBlList");
             }
-            catch (Exception ex)
-            {
-                string err = ex.Message;
-                throw;
-            }
+            return View();
         }
+
+
+        //[HttpPost]
+        //[ActionName("Create")]
+        //public ActionResult Create_Post()
+        //{
+
+        //    try
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+
+        //            BL.Employee employee = new BL.Employee();
+        //            if (TryUpdateModel<BL.Employee>(employee))
+        //            {
+        //                BL.EmployeeBL employeeBL = new BL.EmployeeBL();
+        //                employeeBL.AddEmmployee(employee);
+        //                return RedirectToAction("EmployeeBlList");
+        //            }
+        //            else
+        //            {
+        //                return View();
+        //            }
+        //        }
+        //        return View();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string err = ex.Message;
+        //        throw;
+        //    }
+        //}
 
 
 
