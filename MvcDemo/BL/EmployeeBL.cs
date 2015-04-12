@@ -10,12 +10,12 @@ namespace BL
 {
     public class EmployeeBL
     {
+        readonly string connectionString = ConfigurationManager.ConnectionStrings["EmployeeContext"].ConnectionString;
+
         public IEnumerable<Employee> Employees
         {
             get
             {
-                string connectionString = ConfigurationManager.ConnectionStrings["EmployeeContext"].ConnectionString;
-
                 List<Employee> employees = new List<Employee>();
 
                 using (SqlConnection con = new SqlConnection(connectionString))
@@ -41,5 +41,45 @@ namespace BL
                 return employees;
             }
         }
+
+
+        public void AddEmmployee(Employee employee)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spAddEmployee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter paramName = new SqlParameter();
+                paramName.ParameterName = "@Name";
+                paramName.Value = employee.Name;
+                cmd.Parameters.Add(paramName);
+
+                SqlParameter paramGender = new SqlParameter();
+                paramGender.ParameterName = "@Gender";
+                paramGender.Value = employee.Gender;
+                cmd.Parameters.Add(paramGender);
+
+                SqlParameter paramCity = new SqlParameter();
+                paramCity.ParameterName = "@City";
+                paramCity.Value = employee.City;
+                cmd.Parameters.Add(paramCity);
+
+                SqlParameter paramDepartmentId = new SqlParameter();
+                paramDepartmentId.ParameterName = "@DepartmentId";
+                paramDepartmentId.Value = employee.DepartmentId;
+                cmd.Parameters.Add(paramDepartmentId);
+
+
+                SqlParameter paramDateOfBirth = new SqlParameter();
+                paramDateOfBirth.ParameterName = "@DateOfBirth";
+                paramDateOfBirth.Value = employee.DateOfBirth;
+                cmd.Parameters.Add(paramDateOfBirth);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
     }
 }
