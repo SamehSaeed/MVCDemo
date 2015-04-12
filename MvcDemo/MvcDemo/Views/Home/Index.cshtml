@@ -4,7 +4,7 @@
 
 <h2>My Name</h2>
 <div>
-    @foreach (string str in ViewBag.MyName)
+    @foreach (string str in (List<string>)ViewData["MyName"])
     {
         <span>@str  </span>
     }

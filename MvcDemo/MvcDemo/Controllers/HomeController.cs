@@ -14,7 +14,7 @@ namespace MvcDemo.Controllers
 
         public ActionResult Index(string id, string name)
         {
-            ViewBag.MyName = new List<string>() 
+            ViewData["MyName"] = new List<string>() 
             { 
                 "Sameh",
                 "Saeed",
