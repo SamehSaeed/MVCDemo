@@ -53,3 +53,6 @@ E:\Sameh\GitHub\MVCDemo\MvcDemo\MvcDemo\bin\System.Web.WebPages.Deployment.xml
 E:\Sameh\GitHub\MVCDemo\MvcDemo\MvcDemo\bin\System.Web.WebPages.Razor.xml
 E:\Sameh\GitHub\MVCDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.dll
 E:\Sameh\GitHub\MVCDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.pdb
+E:\Sameh\GitHub\MVCDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.csprojResolveAssemblyReference.cache
+E:\Sameh\GitHub\MVCDemo\MvcDemo\MvcDemo\bin\BL.dll
+E:\Sameh\GitHub\MVCDemo\MvcDemo\MvcDemo\bin\BL.pdb

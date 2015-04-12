@@ -18,6 +18,15 @@ namespace MvcDemo.Controllers
             return View(employees);
         }
 
+        public ActionResult EmployeeBlList()
+        {
+            BL.EmployeeBL empBL = new BL.EmployeeBL();
+            List<BL.Employee> employees = empBL.Employees.ToList();
+
+            return View(employees);
+        }
+
+
         public ActionResult Details(int id)
         {
 
@@ -26,6 +35,13 @@ namespace MvcDemo.Controllers
 
             return View(employee);
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
 
     }
 }
