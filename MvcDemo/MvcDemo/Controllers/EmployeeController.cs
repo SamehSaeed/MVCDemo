@@ -13,7 +13,7 @@ namespace MvcDemo.Controllers
         public ActionResult Index()
         {
             EmployeeContext employeeContext = new EmployeeContext();
-            List<Employee> employees = employeeContext.Employees.ToList();
+            List<BL.Employee> employees = employeeContext.Employees.ToList();
 
             return View(employees);
         }
@@ -31,7 +31,7 @@ namespace MvcDemo.Controllers
         {
 
             EmployeeContext employeeContext = new EmployeeContext();
-            Employee employee = employeeContext.Employees.Single(x => x.EmployeeId == id);
+            BL.Employee employee = employeeContext.Employees.Single(x => x.EmployeeId == id);
 
             return View(employee);
         }

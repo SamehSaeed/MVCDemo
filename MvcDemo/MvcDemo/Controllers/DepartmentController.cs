@@ -12,7 +12,7 @@ namespace MvcDemo.Controllers
         public ActionResult Index()
         {
             EmployeeContext employeeContext = new EmployeeContext();
-            List<Department> departments = employeeContext.Departments.ToList();
+            List<BL.Department> departments = employeeContext.Departments.ToList();
             return View(departments);
         }
 
