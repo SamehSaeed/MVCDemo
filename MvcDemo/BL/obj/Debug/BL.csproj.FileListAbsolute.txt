@@ -1,0 +1,9 @@
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\bin\Debug\BL.dll.config
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\bin\Debug\BL.dll
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\bin\Debug\BL.pdb
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\bin\Debug\EntityFramework.dll
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\bin\Debug\EntityFramework.xml
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\obj\Debug\BL.dll
+E:\Sameh\GitHub\MVCDemo\MvcDemo\BL\obj\Debug\BL.pdb
